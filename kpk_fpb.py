@@ -31,7 +31,11 @@ for x in list1:
     if a%x==0 and b%x==0:
         list2.append(x)
 # print(list2)
-# langkah 5 : FPB adalah elemen terbesar pada list2
-print(f'\nFPB dari {a} dan {b} = {list2[len(list2)-1]}')
-# langkah 6 : KPK adalah hasil kali dua elemen a dan b di bagi dengan FPB dari a dan b
-print('KPK dari {} dan {} = {:.0f}'.format(a,b, a*b/list2[len(list2)-1]))
+if a==0 or b==0:
+    print('\nKPK dan FPB = 0')
+else:
+    # langkah 5 : FPB adalah elemen terbesar pada list2
+    print(f'\nFPB dari {a} dan {b} = {list2[len(list2)-1]}')
+    # langkah 6 : KPK adalah hasil kali dua elemen a dan b di bagi dengan FPB dari a dan b
+    print('KPK dari {} dan {} = {:.0f}'.format(a,b, a*b/list2[len(list2)-1]))   
+
