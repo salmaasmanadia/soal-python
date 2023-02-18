@@ -45,14 +45,11 @@ def integerToRoman(A):
 		if lastNum <= 3:
 			res += (romansDict[div] * lastNum)
 		elif lastNum == 4:
-			res += (romansDict[div] +
-						romansDict[div * 5])
+			res += (romansDict[div] + romansDict[div * 5])
 		elif 5 <= lastNum <= 8:
-			res += (romansDict[div * 5] +
-			(romansDict[div] * (lastNum - 5)))
+			res += (romansDict[div * 5] + (romansDict[div] * (lastNum - 5)))
 		elif lastNum == 9:
-			res += (romansDict[div] +
-						romansDict[div * 10])
+			res += (romansDict[div] + romansDict[div * 10])
 
 		A = math.floor(A % div)
 		div /= 10
